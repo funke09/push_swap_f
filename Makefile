@@ -18,7 +18,7 @@ CC = cc
 
 INC = push_swap
 
-FLAGS = -g -fsanitize=address -Wall -Wextra -Werror
+FLAGS =  -Wall -Wextra -Werror #-g -fsanitize=address
 
 HEADER = push_swap.h
 BNS_HEADER = checker.h

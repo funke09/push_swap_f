@@ -12,11 +12,11 @@
 
 #include "push_swap.h"
 
-t_stack	*init_stacks(int size)
+void	init_stacks(int size, t_stack *tab)
 {
-	t_stack	*tab;
+	// t_stack	*tab;
 
-	tab = (t_stack *) malloc(sizeof(*tab));
+	// tab = (t_stack *) malloc(sizeof(*tab));
 	tab->array_a = (int *) malloc(sizeof(int) * size);
 	tab->array_b = (int *) malloc(sizeof(int) * size);
 	tab->array_s = (int *) malloc(sizeof(int) * size);
@@ -27,7 +27,7 @@ t_stack	*init_stacks(int size)
 	tab->size_a = size;
 	tab->size_b = 0;
 	tab->size = size;
-	return (tab);
+	// return (tab);
 }
 
 void	push(t_stack *array, int value, int i)

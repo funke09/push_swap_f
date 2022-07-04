@@ -55,7 +55,7 @@ char	**get_args(int ac, char **av);
 char	**parse_to_stack(int ac, char **av, int *i);
 
 /********* stack *********/
-t_stack	*init_stacks(int size);
+void	init_stacks(int size, t_stack *tab);
 void	push(t_stack *array, int value, int i);
 int		is_sortd(t_stack *array);
 void	sort_array_s(t_stack *array);

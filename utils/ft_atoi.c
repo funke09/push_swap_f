@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 08:17:44 by zcherrad         #+#    #+#             */
-/*   Updated: 2022/07/03 22:42:34 by zcherrad         ###   ########.fr       */
+/*   Created: 2022/07/04 02:37:47 by zcherrad          #+#    #+#             */
+/*   Updated: 2022/07/04 02:38:09 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	ft_atoi(const char *str)
 {
-	int	x;
-	int	signe;
+	int		x;
+	int		signe;
 	long	rst;
 
 	x = 0;
