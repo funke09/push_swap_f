@@ -6,7 +6,7 @@
 /*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 22:12:41 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/07/04 22:33:28 by zcherrad         ###   ########.fr       */
+/*   Updated: 2022/07/05 02:04:16 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 	array = (t_stack *) malloc(sizeof(*array));
 	tab = parse_to_stack(ac, av, &i);
 	array->size = i;
-	array = init_stacks(i);
+	init_stacks(i, array);
 	x = -1;
 	while (++x < i)
 		push(array, ft_atoi(tab[x]), x);
