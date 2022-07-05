@@ -50,7 +50,7 @@ int		*ft_swap(int *a, int *b);
 
 int		check_array(char **tab);
 char	**get_args(int ac, char **av);
-int			check_args(char **tab);
+int		check_args(char **tab);
 char	**parse_to_stack(int ac, char **av, int *i);
 
 /********* stack *********/
