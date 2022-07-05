@@ -6,7 +6,7 @@
 /*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 02:36:56 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/07/04 22:47:54 by zcherrad         ###   ########.fr       */
+/*   Updated: 2022/07/05 01:59:36 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ int	main(int ac, char **av)
 		return (0);
 	norm(array, count);
 	ft_free(array);
-	system("leaks push_swap");
+	// system("leaks push_swap");// to test if there's leaks 
 }
