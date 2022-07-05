@@ -6,11 +6,40 @@
 /*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 22:11:09 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/07/04 22:11:13 by zcherrad         ###   ########.fr       */
+/*   Updated: 2022/07/05 03:34:21 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+char	**get_args(int ac, char **av)
+{
+	char	**tab;
+	char	*str;
+	char	*arg;
+	int		i;
+
+	i = 1;
+	str = (char *)malloc(1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[0] = '\0';
+	if (check_args(av) == 0)
+	{
+		write (2, "Error\n", 6);
+		exit (1);
+	}
+	while (i < ac)
+	{
+		arg = ft_strjoin(str, av[i++]);
+		free (str);
+		str = ft_strjoin(arg, " ");
+		free(arg);
+	}
+	tab = ft_split(str, ' ');
+	free (str);
+	return (tab);
+}
 
 void	sort_2(t_stack *array)
 {

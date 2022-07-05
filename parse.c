@@ -32,33 +32,40 @@ int	is_double(char **t)
 	return (1);
 }
 
+int	small_check(char **tab, int i)
+{
+	int	x;
+
+	x = 0;
+	while (tab[i][x])
+	{
+		if (tab[i][x] == '-' || tab[i][x] == '+')
+			x++;
+		if (!ft_isdigit(tab[i][x]) || !is_double(tab)
+			|| ft_atoi(tab[i]) < INT_MIN
+				||ft_atoi(tab[i]) > INT_MAX)
+		{
+			write(2, "Error\n", 6);
+			exit(1);
+		}
+		while (ft_isdigit(tab[i][x]) == 1)
+		{
+			if (tab[i][x + 1] == '-' || tab[i][x + 1] == '+')
+				return (0);
+			x++;
+		}
+	}
+	return (1);
+}
+
 int	check_array(char **tab)
 {
 	int	i;
-	int	x;
 
 	i = 0;
 	while (tab[i])
 	{
-		x = 0;
-		while (tab[i][x])
-		{
-			if (tab[i][x] == '-' || tab[i][x] == '+')
-				x++;
-			if (!ft_isdigit(tab[i][x]) || !is_double(tab)
-			|| ft_atoi(tab[i]) < INT_MIN
-				||ft_atoi(tab[i]) > INT_MAX)
-			{
-				write(2, "Error\n", 6);
-				exit(1);
-			}
-			while (ft_isdigit(tab[i][x]) == 1)
-			{
-				if (tab[i][x + 1] == '-' || tab[i][x + 1] == '+')
-					return (0);
-				x++;
-			}
-		}
+		small_check(tab, i);
 		i++;
 	}
 	return (1);
@@ -80,7 +87,7 @@ static	size_t	count_espace(char *av)
 	return (x);
 }
 
-static	int	check_args(char **tab)
+int	check_args(char **tab)
 {
 	int	i;
 
@@ -92,33 +99,4 @@ static	int	check_args(char **tab)
 		i++;
 	}
 	return (1);
-}
-
-char	**get_args(int ac, char **av)
-{
-	char	**tab;
-	char	*str;
-	char	*arg;
-	int		i;
-
-	i = 1;
-	str = (char *)malloc(1 * sizeof(char));
-	if (!str)
-		return (NULL);
-	str[0] = '\0';
-	if (check_args(av) == 0)
-	{
-		write (2, "Error\n", 6);
-		exit (1);
-	}
-	while (i < ac)
-	{
-		arg = ft_strjoin(str, av[i++]);
-		free (str);
-		str = ft_strjoin(arg, " ");
-		free(arg);
-	}
-	tab = ft_split(str, ' ');
-	free (str);
-	return (tab);
 }

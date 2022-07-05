@@ -24,14 +24,12 @@ HEADER = push_swap.h
 BNS_HEADER = checker.h
 
 SRC =	utils/ft_atoi.c\
-		utils/ft_calloc.c\
 		utils/ft_isdigit.c\
 		utils/ft_split.c\
 		utils/ft_strlcat.c\
 		utils/ft_strlcpy.c\
 		utils/ft_strlen.c\
 		utils/ft_strjoin.c\
-		utils/ft_bzero.c\
 		instructions/instructions.c\
 		instructions/instructions1.c\
 		instructions/instructions2.c\
@@ -52,7 +50,6 @@ BNS_SRC = main.c \
 		  sort.c\
 		  sort1.c\
 		  utils/ft_atoi.c\
-		  utils/ft_calloc.c\
 		  utils/ft_isdigit.c\
 		  utils/ft_split.c\
 		  utils/ft_strlcat.c\
@@ -60,7 +57,6 @@ BNS_SRC = main.c \
 		  utils/ft_strlen.c\
 		  utils/get_next_line.c\
 		  utils/ft_strjoin.c\
-		  utils/ft_bzero.c\
 		  instructions/instructions.c\
 		  instructions/instructions1.c\
 		  instructions/instructions2.c\

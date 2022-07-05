@@ -22,7 +22,7 @@ typedef struct Stack
 {
 	int		*array_a;
 	int		*array_b;
-	int		*array_s;// fake
+	int		*array_s;
 	int		size;
 	int		size_a;
 	int		size_b;
@@ -38,9 +38,7 @@ size_t	ft_strlen(const	char *s);
 char	*ft_strchr(char *s, int c);
 void	ft_putstr(char *s);
 long	ft_atoi(const char *str);
-void	ft_bzero(void *s, int n);
 int		ft_isdigit(int c);
-void	*ft_calloc(size_t count, int size);
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -52,6 +50,7 @@ int		*ft_swap(int *a, int *b);
 
 int		check_array(char **tab);
 char	**get_args(int ac, char **av);
+int			check_args(char **tab);
 char	**parse_to_stack(int ac, char **av, int *i);
 
 /********* stack *********/
@@ -60,9 +59,6 @@ void	push(t_stack *array, int value, int i);
 int		is_sortd(t_stack *array);
 void	sort_array_s(t_stack *array);
 void	bubble(int *arr, int n);
-void	bubbleSort(int *arr, int n);
-void	printArraya(int *arr, int size, t_stack *stack);
-void	printArrayb(int *arr, int size, t_stack *stack);
 
 /******** instructions  *****/
 void	sa(t_stack *stack, char *str);

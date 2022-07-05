@@ -98,14 +98,7 @@ void	push_back_to_a(t_stack *array)
 
 void	sort_100_nd_500(t_stack *array, int d)
 {
-	// int	p1;
-	// int	p2;
-	// int	index;
-
-	// p1 = array->size / d;
-	// p2 = 0;
-	// index = 0;
-	bubble(array->array_s, array->size_a);//
+	bubble(array->array_s, array->size_a);
 	push_to_b_100(array, d);
 	push_back_to_a(array);
 }
